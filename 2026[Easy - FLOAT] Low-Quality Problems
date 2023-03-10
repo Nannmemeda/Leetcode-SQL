@@ -1,0 +1,4 @@
+SELECT DISTINCT problem_id
+FROM Problems
+WHERE (likes / CAST((likes + dislikes) AS FLOAT)) * 100 < 60
+ORDER BY problem_id
